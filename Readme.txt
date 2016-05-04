@@ -1,0 +1,52 @@
+***********************************
+** Author: Adeyinka Oluwatobi    **
+** Company: Nectar Microsystems  **
+** File: 2 Lies 1 Fact readme    **
+** Date: 23-01-2016              **
+***********************************
+
+*** version change logs ************************************************************************************************
+
+    version 1.0.0 (version code 1):
+        --release date 23-01-2016
+        --initial release
+
+    version 1.0.1 (version code 2):
+        --release date 02-02-2016
+        --added new statements
+
+    version 1.0.2 (version code 3):
+        --release date 04-02-2016
+        --fixed bug that made the play button hang
+        --implemented google play services
+        --implemented google analytics
+
+    version 1.0.3 (version code 4):
+        --release date 05-02-2016
+        --implemented google admob
+        --added new statements
+
+    version 1.0.4 (version code 5):
+        --release date 06-02-2016
+        --corrected grammar errors
+        --added new statements: 80 questions at this point.
+        --fixed bug that allowed answer to be changed before the next question loads
+
+    version 1.0.5 (version code 6):
+        --release date 07-02-2016
+        --fixed bug on final score page that broke 3 digits into 2 lines
+        --added new statements
+
+    version 1.0.6 (version code 7):
+        --release date 09-02-2016
+        --added new statements: 100 questions at this point.
+
+    version 1.1.0 (version code 8):
+        --release date
+        --added menu option on start screen and options screen
+        --added sound settings functionality
+        --corrected some statement grammar errors
+        --added highscore functionality
+        --added statistics button to options screen
+
+************************************************************************************************************************
