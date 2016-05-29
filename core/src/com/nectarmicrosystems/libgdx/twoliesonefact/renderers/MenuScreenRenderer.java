@@ -61,8 +61,13 @@ public class MenuScreenRenderer implements Renderer {
     private void renderButtons(){
         SimpleButton[] buttons = screen.getButtons();
 
-        for(int i = 0; i < 2; i++)
+        for(int i = 0; i < 2; i++) {
+            //don't render menu button
+            if(i == 1)
+                continue;
+
             buttons[i].draw(batcher);
+        }
 
         if(GameSettings.soundEnabled())
             buttons[2].draw(batcher);

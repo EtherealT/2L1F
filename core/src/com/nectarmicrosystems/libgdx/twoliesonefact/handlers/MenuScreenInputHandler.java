@@ -42,11 +42,12 @@ public class MenuScreenInputHandler extends InputHandler {
             return true;
         }
 
+        //ignore menu button
         //menu button
-        if(buttons[1].isClicked(screenX, screenY) && buttons[1].isClickable()){
+        /*if(buttons[1].isClicked(screenX, screenY) && buttons[1].isClickable()){
             buttons[1].isTouchDown(screenX, screenY);
             return true;
-        }
+        }*/
 
         //sound on button
         if(buttons[2].isClicked(screenX, screenY) && buttons[2].isClickable()){
@@ -78,13 +79,14 @@ public class MenuScreenInputHandler extends InputHandler {
             return true;
         }
 
+        //ignore menu button
         //menu button
-        if(buttons[1].isClicked(screenX, screenY) && buttons[1].isClickable()){
+        /*if(buttons[1].isClicked(screenX, screenY) && buttons[1].isClickable()){
             AssetsHandler.playSound();
             buttons[1].isTouchUp(screenX, screenY);
             TwoLiesOneFact.GAME.setScreen(new OptionsScreen());
             return true;
-        }
+        }*/
 
         //sound on button
         if(buttons[2].isClicked(screenX, screenY) && buttons[2].isClickable()){
