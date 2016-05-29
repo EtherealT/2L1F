@@ -43,10 +43,10 @@
 
     version 1.1.0 (version code 8):
         --release date
-        --added menu option on start screen and options screen
         --added sound settings functionality
         --corrected some statement grammar errors
-        --added highscore functionality
-        --added statistics button to options screen
+        --added highscore functionality in game settings(no views yet)
+        --added statistics button to options screen (no view yet)
+        --added new statements
 
 ************************************************************************************************************************
