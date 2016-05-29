@@ -42,7 +42,7 @@
         --added new statements: 100 questions at this point.
 
     version 1.1.0 (version code 8):
-        --release date
+        --release date 29-05-2016
         --added sound settings functionality
         --corrected some statement grammar errors
         --added highscore functionality in game settings(no views yet)
