@@ -18,7 +18,7 @@ import com.nectarmicrosystems.libgdx.twoliesonefact.main.TwoLiesOneFact;
 
 public class AndroidLauncher extends AndroidApplication implements AdsController {
 	private Tracker mTracker;
-	private static final String BANNER_AD_UNIT_ID = "ca-app-pub-6513366131729803/2239843178";
+	private static final String BANNER_AD_UNIT_ID = Config.BANNER_AD_UNIT_ID;
 
 	AdView bannerAd;
 

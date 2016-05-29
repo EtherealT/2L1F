@@ -1,1 +1,4 @@
-/build/
+build/
+
+#sensitive data in config file
+Config.java
