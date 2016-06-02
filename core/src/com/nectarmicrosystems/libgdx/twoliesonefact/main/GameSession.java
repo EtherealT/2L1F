@@ -23,9 +23,9 @@ public class GameSession {
     private String[] selectedTrueValue;
     private int timer;
     private String currentTrueValue;
-    Thread timerThread;
-    Bonus timeBonus;
-    Bonus eraseOneBonus;
+    private Thread timerThread;
+    private Bonus timeBonus;
+    private Bonus eraseOneBonus;
 
     public GameSession(){
         this.gameState = GameState.Ready;

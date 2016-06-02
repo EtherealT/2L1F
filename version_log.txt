@@ -49,4 +49,8 @@
         --added statistics button to options screen (no view yet)
         --added new statements
 
+    version 1.2.0 (version code 9):
+        --release date
+        --added highscore to game over screen
+
 ************************************************************************************************************************
