@@ -27,6 +27,7 @@ public class SplashScreenRenderer implements Renderer {
     public static BitmapFont timerValueFont;
     public static BitmapFont statementFont;
     public static BitmapFont finalScoreFont;
+    public static BitmapFont highestScoreFont;
 
     public SplashScreenRenderer(SplashScreen screen){
         this.screen = screen;
@@ -68,6 +69,8 @@ public class SplashScreenRenderer implements Renderer {
                     parameter.color = Color.valueOf("#fff4ea");
                     parameter.size = 100;
                     finalScoreFont = generator.generateFont(parameter);
+                    parameter.size = 40;
+                    highestScoreFont = generator.generateFont(parameter);
                 }
             });
         }

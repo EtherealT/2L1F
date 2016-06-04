@@ -3,6 +3,7 @@ package com.nectarmicrosystems.libgdx.twoliesonefact.main;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.nectarmicrosystems.libgdx.twoliesonefact.handlers.AssetsHandler;
+import com.nectarmicrosystems.libgdx.twoliesonefact.handlers.GameSettings;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,6 +18,7 @@ public class GameSession {
     private GameState gameState;
     private AnswerState answerState;
     private int score;
+    private int highestScore;
     private int questionCount;
     private ArrayList<Statement> statements;
     private ArrayList<Statement> answers;
@@ -31,6 +33,7 @@ public class GameSession {
         this.gameState = GameState.Ready;
         this.answerState = AnswerState.NotAnswered;
         this.score = 0;
+        highestScore = GameSettings.getHighscore();
         this.questionCount = 0;
         statements = new ArrayList<Statement>();
         answers = new ArrayList<Statement>();
@@ -65,6 +68,7 @@ public class GameSession {
     public void play(){
         updateScore();
         updateQuestionCount();
+        updateHighscore();
     }
 
     public void pause(){
@@ -243,5 +247,17 @@ public class GameSession {
 
     public String[] getSelectedTrueValue() {
         return selectedTrueValue;
+    }
+
+    public int getHighestScore(){
+        return highestScore;
+    }
+
+    public void updateHighscore(){
+        if(score > highestScore) {
+            highestScore = score;
+            GameSettings.setHighscore(highestScore);
+            GameSettings.save();
+        }
     }
 }

@@ -35,6 +35,7 @@ public class GameScreenRenderer implements Renderer {
     BitmapFont timerValueFont;
     BitmapFont statementFont;
     BitmapFont finalScoreFont;
+    BitmapFont highestScoreFont;
 
     public GameScreenRenderer(GameScreen screen){
         this.screen = screen;
@@ -70,6 +71,7 @@ public class GameScreenRenderer implements Renderer {
         timerValueFont = SplashScreenRenderer.timerValueFont;
         statementFont = SplashScreenRenderer.statementFont;
         finalScoreFont = SplashScreenRenderer.finalScoreFont;
+        highestScoreFont = SplashScreenRenderer.highestScoreFont;
     }
     
     @Override
@@ -147,8 +149,9 @@ public class GameScreenRenderer implements Renderer {
         statementFont.draw(batcher, solution, questionSprite.getX() + 50, questionSprite.getY() + AssetsHandler.questionTexture.getHeight()/2 + 50, 500, Align.center, true);
         lineSprite.draw(batcher);
         lineSprite2.draw(batcher);
-        scoreFont.draw(batcher, "Score", TwoLiesOneFact.GAME_WIDTH/2 - 50, TwoLiesOneFact.GAME_HEIGHT/2 + 100, 100, Align.center, true);
-        finalScoreFont.draw(batcher, String.valueOf(screen.getGameSession().getScore()), TwoLiesOneFact.GAME_WIDTH/2 - 250, TwoLiesOneFact.GAME_HEIGHT/2, 500, Align.center, true);
+        scoreFont.draw(batcher, "Score", TwoLiesOneFact.GAME_WIDTH/2 - 50, TwoLiesOneFact.GAME_HEIGHT/2 + 130, 100, Align.center, true);
+        finalScoreFont.draw(batcher, String.valueOf(screen.getGameSession().getScore()), TwoLiesOneFact.GAME_WIDTH/2 - 250, TwoLiesOneFact.GAME_HEIGHT/2 + 50, 500, Align.center, true);
+        highestScoreFont.draw(batcher, "Highest Score: " + String.valueOf(screen.getGameSession().getHighestScore()), TwoLiesOneFact.GAME_WIDTH/2 - 250, TwoLiesOneFact.GAME_HEIGHT/2 - 100, 500, Align.center, true);
         renderButtons();
         batcher.disableBlending();
     }
