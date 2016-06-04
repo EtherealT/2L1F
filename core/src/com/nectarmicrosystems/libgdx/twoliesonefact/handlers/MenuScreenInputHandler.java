@@ -22,7 +22,7 @@ public class MenuScreenInputHandler extends InputHandler {
     public boolean keyUp(int keycode) {
         if(keycode == Input.Keys.BACK) {
             AssetsHandler.playSound();
-            GameSettings.save();
+            TwoLiesOneFact.GAME_SETTINGS.save();
             Gdx.app.exit();
         }
 
@@ -91,12 +91,11 @@ public class MenuScreenInputHandler extends InputHandler {
         //sound on button
         if(buttons[2].isClicked(screenX, screenY) && buttons[2].isClickable()){
             buttons[2].isTouchUp(screenX, screenY);
-            AssetsHandler.playSound();
 
-            if (GameSettings.soundEnabled())
-                GameSettings.setSound(false);
+            if (TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
+                TwoLiesOneFact.GAME_SETTINGS.setSound(false);
             else
-                GameSettings.setSound(true);
+                TwoLiesOneFact.GAME_SETTINGS.setSound(true);
 
             return true;
         }

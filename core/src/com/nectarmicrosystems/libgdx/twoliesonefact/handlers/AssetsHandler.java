@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.nectarmicrosystems.libgdx.twoliesonefact.main.TwoLiesOneFact;
 
 /**
  * Created by oluwatobi on 12/26/2015.
@@ -215,22 +216,22 @@ public abstract class AssetsHandler {
     }
 
     public static void playSound(){
-        if(GameSettings.soundEnabled())
+        if(TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
             clickSound.play(1f);
     }
 
     public static void playTick(){
-        if(GameSettings.soundEnabled())
+        if(TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
             tickSound.play(1f);
     }
 
     public static void playCorrectSound(){
-        if(GameSettings.soundEnabled())
+        if(TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
             correctSound.play(1f);
     }
 
     public static void playWrongSound(){
-        if(GameSettings.soundEnabled())
+        if(TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
             wrongSound.play(1f);
     }
 }

@@ -52,5 +52,7 @@
     version 1.2.0 (version code 9):
         --release date
         --added highscore to game over screen
+        --changed preference variables from static to non-static(to fix problem where settings reset on app force close)
+        --removed sound when sound setting button is pressed
 
 ************************************************************************************************************************

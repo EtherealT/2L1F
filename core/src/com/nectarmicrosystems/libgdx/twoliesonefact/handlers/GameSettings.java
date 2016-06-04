@@ -11,41 +11,45 @@ public class GameSettings {
     private static final String SOUND_SETTINGS_LABEL = "soundOn";
     private static final String HIGHSCORE_LABEL = "highscore";
 
-    private static boolean soundOn = true;
-    private static int highscore = 0;
-    private static Preferences preferences;
+    private boolean soundOn = true;
+    private int highscore = 0;
+    private Preferences preferences;
 
-    private static Preferences getPrefs() {
+    public GameSettings(){
+        this.load();
+    }
+
+    private Preferences getPrefs() {
         if(preferences == null)
             preferences = Gdx.app.getPreferences(PREFS_NAME);
 
         return preferences;
     }
 
-    public static void load(){
+    public void load(){
         soundOn = getPrefs().getBoolean(SOUND_SETTINGS_LABEL, true);
         highscore = getPrefs().getInteger(HIGHSCORE_LABEL, 0);
     }
 
-    public static void save(){
+    public void save(){
         getPrefs().putBoolean(SOUND_SETTINGS_LABEL, soundOn);
         getPrefs().putInteger(HIGHSCORE_LABEL, highscore);
         getPrefs().flush();
     }
 
-    public static void setSound(boolean val){
+    public void setSound(boolean val){
         soundOn = val;
     }
 
-    public static void setHighscore(int val){
+    public void setHighscore(int val){
         highscore = val;
     }
 
-    public static int getHighscore(){
+    public int getHighscore(){
         return highscore;
     }
 
-    public static boolean soundEnabled(){
+    public boolean soundEnabled(){
         return soundOn;
     }
 

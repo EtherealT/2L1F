@@ -69,7 +69,7 @@ public class MenuScreenRenderer implements Renderer {
             buttons[i].draw(batcher);
         }
 
-        if(GameSettings.soundEnabled())
+        if(TwoLiesOneFact.GAME_SETTINGS.soundEnabled())
             buttons[2].draw(batcher);
         else
             buttons[3].draw(batcher);

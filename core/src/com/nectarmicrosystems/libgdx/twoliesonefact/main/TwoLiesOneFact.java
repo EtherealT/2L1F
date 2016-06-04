@@ -16,6 +16,7 @@ public class TwoLiesOneFact extends Game{
 	public static float GAME_HEIGHT;
 	public static float SCALE;
 	public static Game GAME;
+	public static GameSettings GAME_SETTINGS;
 
 	public static AdsController adsController;
 
@@ -31,6 +32,7 @@ public class TwoLiesOneFact extends Game{
 		GAME_HEIGHT = SCREEN_HEIGHT / (SCREEN_WIDTH / GAME_WIDTH);
 		SCALE = SCREEN_WIDTH / GAME_WIDTH;
 		GAME = this;
+		GAME_SETTINGS = new GameSettings();
 
 		AssetsHandler.load();
 		this.setScreen(new SplashScreen());
@@ -39,13 +41,13 @@ public class TwoLiesOneFact extends Game{
 	@Override
 	public void pause() {
 		super.pause();
-		GameSettings.save();
+		GAME_SETTINGS.save();
 	}
 
 	@Override
 	public void resume() {
 		super.resume();
-		GameSettings.load();
+		GAME_SETTINGS.load();
 	}
 
 	public static boolean internetAvailable() {

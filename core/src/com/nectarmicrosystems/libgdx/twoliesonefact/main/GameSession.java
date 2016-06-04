@@ -33,7 +33,7 @@ public class GameSession {
         this.gameState = GameState.Ready;
         this.answerState = AnswerState.NotAnswered;
         this.score = 0;
-        highestScore = GameSettings.getHighscore();
+        highestScore = TwoLiesOneFact.GAME_SETTINGS.getHighscore();
         this.questionCount = 0;
         statements = new ArrayList<Statement>();
         answers = new ArrayList<Statement>();
@@ -256,8 +256,8 @@ public class GameSession {
     public void updateHighscore(){
         if(score > highestScore) {
             highestScore = score;
-            GameSettings.setHighscore(highestScore);
-            GameSettings.save();
+            TwoLiesOneFact.GAME_SETTINGS.setHighscore(highestScore);
+            TwoLiesOneFact.GAME_SETTINGS.save();
         }
     }
 }
