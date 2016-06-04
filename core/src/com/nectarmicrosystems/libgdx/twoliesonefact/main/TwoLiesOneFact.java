@@ -45,6 +45,12 @@ public class TwoLiesOneFact extends Game{
 	}
 
 	@Override
+	public void dispose() {
+		super.dispose();
+		GAME_SETTINGS.save();
+	}
+
+	@Override
 	public void resume() {
 		super.resume();
 		GAME_SETTINGS.load();
