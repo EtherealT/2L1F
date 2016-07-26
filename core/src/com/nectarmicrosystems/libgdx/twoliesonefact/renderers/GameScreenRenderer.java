@@ -18,7 +18,7 @@ import com.nectarmicrosystems.libgdx.twoliesonefact.uiElements.SimpleButton;
 public class GameScreenRenderer implements Renderer {
 
     private SpriteBatch batcher;
-    OrthographicCamera camera;
+    private OrthographicCamera camera;
     private Sprite bgSprite;
     private Sprite endBgSprite;
     private Sprite questionSprite;
@@ -30,12 +30,12 @@ public class GameScreenRenderer implements Renderer {
     private Sprite touchToBegin;
     private GameScreen screen;
 
-    BitmapFont scoreFont;
-    BitmapFont scoreValueFont;
-    BitmapFont timerValueFont;
-    BitmapFont statementFont;
-    BitmapFont finalScoreFont;
-    BitmapFont highestScoreFont;
+    private BitmapFont scoreFont;
+    private BitmapFont scoreValueFont;
+    private BitmapFont timerValueFont;
+    private BitmapFont statementFont;
+    private BitmapFont finalScoreFont;
+    private BitmapFont highestScoreFont;
 
     public GameScreenRenderer(GameScreen screen){
         this.screen = screen;
