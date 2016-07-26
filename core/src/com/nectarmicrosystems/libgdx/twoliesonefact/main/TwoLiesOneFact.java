@@ -40,14 +40,14 @@ public class TwoLiesOneFact extends Game{
 
 	@Override
 	public void pause() {
-		super.pause();
 		GAME_SETTINGS.save();
+		super.pause();
 	}
 
 	@Override
 	public void dispose() {
-		super.dispose();
 		GAME_SETTINGS.save();
+		super.dispose();
 	}
 
 	@Override
@@ -69,6 +69,5 @@ public class TwoLiesOneFact extends Game{
 		} catch (Exception e) {
 			return false;
 		}
-
 	}
 }

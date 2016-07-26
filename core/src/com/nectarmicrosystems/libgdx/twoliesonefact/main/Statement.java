@@ -12,7 +12,6 @@ public class Statement {
         this.statement = statement;
         this.value = value;
         this.index = index;
-
     }
 
     public String getStatement() {
